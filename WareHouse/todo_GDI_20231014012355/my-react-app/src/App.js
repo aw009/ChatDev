@@ -22,7 +22,15 @@ function App() {
     updatedTodos[index].dateCompleted = new Date().toLocaleString();
     setTodos(updatedTodos);
   };
-
+  
+  const handleDeleteTodo = (originalIndex) => {
+    if (window.confirm('Are you sure you want to delete this task?')) {
+      const updatedTodos = [...todos];
+      updatedTodos.splice(originalIndex, 1);
+      setTodos(updatedTodos);
+    }
+  };
+  
   const activeTodos = todos.map((todo, index) => ({...todo, originalIndex: index}))
                           .filter((todo) => todo.dateCompleted === null);
 
@@ -38,7 +46,7 @@ function App() {
         <TodoList className="active-tasks" todos={activeTodos} handleCompleteTodo={handleCompleteTodo} />
         <hr />
         <h2 className="table-header">Completed Todo Items</h2>
-        <TodoList className="completed-tasks" todos={completedTodos} />
+        <TodoList className="completed-tasks" todos={completedTodos} handleDeleteTodo={handleDeleteTodo} />
       </div>
     </div>
   );

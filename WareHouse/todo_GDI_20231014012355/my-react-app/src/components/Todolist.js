@@ -1,8 +1,8 @@
 import React from 'react';
 
-function TodoList({ className, todos, handleCompleteTodo }) {
+function TodoList({ className, todos, handleCompleteTodo, handleDeleteTodo }) {
   return (
-    <table className={className}> {/* <- Applying the className prop to the table */}
+    <table className={className}>
       <thead>
         <tr className="table-heading">
           <th>Date Added</th>
@@ -16,8 +16,13 @@ function TodoList({ className, todos, handleCompleteTodo }) {
             <td>{todo.dateAdded}</td>
             <td>{todo.description}</td>
             <td>
-              <button onClick={() => handleCompleteTodo(todo.originalIndex ? todo.originalIndex : index)}>Complete</button>
+              {todo.dateCompleted ? (
+                <button onClick={() => handleDeleteTodo(todo.originalIndex)}>Delete</button>
+              ) : (
+                <button onClick={() => handleCompleteTodo(todo.originalIndex)}>Complete</button>
+              )}
             </td>
+
           </tr>
         ))}
       </tbody>
