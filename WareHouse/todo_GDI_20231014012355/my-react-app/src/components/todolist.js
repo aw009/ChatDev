@@ -10,13 +10,13 @@ function TodoList({ todos, handleCompleteTodo }) {
         </tr>
       </thead>
       <tbody>
-        {todos.map((todo, index) => (
-          <tr key={index}>
+        {todos.map((todo) => (
+          <tr key={todo.originalIndex}>
             <td>{todo.dateAdded}</td>
             <td>{todo.description}</td>
             {handleCompleteTodo && (
               <td>
-                <button onClick={() => handleCompleteTodo(index)}>Complete</button>
+                <button onClick={() => handleCompleteTodo(todo.originalIndex)}>Complete</button>
               </td>
             )}
           </tr>

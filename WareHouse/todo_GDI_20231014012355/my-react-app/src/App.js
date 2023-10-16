@@ -28,8 +28,12 @@ function App() {
     setTodos(updatedTodos);
   };
 
-  const activeTodos = todos.filter((todo) => todo.dateCompleted === null);
-  const completedTodos = todos.filter((todo) => todo.dateCompleted !== null);
+  const activeTodos = todos.map((todo, index) => ({...todo, originalIndex: index}))
+                          .filter((todo) => todo.dateCompleted === null);
+
+  const completedTodos = todos.map((todo, index) => ({...todo, originalIndex: index}))
+                          .filter((todo) => todo.dateCompleted !== null);
+
 
   return (
     <div className="App">
