@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <title>Todo List</title>
+    <!-- Keeping the favicon and other meta tags from CRA -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Removed the Flask static link as you'll now use the CSS within the CRA structure -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
+    
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <!-- These are unnecessary when using Create React App, since CRA has its own React scripts -->
+    <!-- <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script> -->
+    <!-- <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script> -->
+
+    <!-- If you're not using Flask's static files anymore, this is also unnecessary -->
+    <!-- <script type="module" src="{{ url_for('static', filename='main-compiled.js') }}"></script> -->
+  </body>
+</html>
