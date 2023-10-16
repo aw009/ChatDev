@@ -1,45 +1,118 @@
-table {
-  width: 100%;
-  border-collapse: collapse;
+/* General styles */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 0;
 }
-th,
-td {
-  padding: 8px;
-  text-align: left;
+
+.App {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
 }
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-button {
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
+
 .header {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 16px;
+  text-align: center;
+  margin-bottom: 20px;
 }
+
 .input-container {
   display: flex;
   align-items: center;
   margin-bottom: 16px;
+  color: #555;
 }
+
 .input-container input {
   flex: 1;
   padding: 8px;
   font-size: 16px;
 }
+
+.addButton {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background: #AAAAAA;
+  border-radius: 0px 5px 5px 0px;
+  border: none;
+  position: relative;
+}
+
+.addButton:before,
+.addButton:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 3px;
+  background-color: #fcfafa;
+}
+
+.addButton:before {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.addButton:after {
+  transform: translate(-50%, -50%);
+}
+
+.addButton:hover:before,
+.addButton:hover:after {
+  background-color: #555;
+}
+
 .table-header {
-  font-size: 20px;
-  font-weight: bold;
-  margin-top: 24px;
-  margin-bottom: 8px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* TodoList component styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+/* Active tasks styles */
+table.active-tasks thead {
+  background-color: #ff6b91; /* Deeper pink */
+  color: white;
+}
+
+table.active-tasks tbody tr:first-child {
+  background-color: #fff; /* White right next to the header */
+}
+
+table.active-tasks tbody tr:nth-child(odd) {
+  background-color: #ffebef; /* Light pink */
+}
+
+table.active-tasks tbody tr:nth-child(even) {
+  background-color: #ffd3d9; /* Darker pink */
+}
+
+/* Completed tasks styles */
+table.completed-tasks thead {
+  background-color: #64b5f6; /* Deeper blue */
+  color: white;
+}
+
+table.completed-tasks tbody tr:first-child {
+  background-color: #fff; /* White right next to the header */
+}
+
+table.completed-tasks tbody tr:nth-child(odd) {
+  background-color: #e7f7ff; /* Light blue */
+}
+
+table.completed-tasks tbody tr:nth-child(even) {
+  background-color: #d0e9ff; /* Slightly darker blue */
 }
