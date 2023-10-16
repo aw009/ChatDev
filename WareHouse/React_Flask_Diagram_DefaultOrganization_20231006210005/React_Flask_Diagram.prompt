@@ -1,0 +1,1 @@
+A python Flask and React application that gathers a process description from a user, sends that process description to gpt-3, and then instructs GPT to output a mermaid diagram which will be displayed to the user. Please use a postgres database and create all needed schemas.

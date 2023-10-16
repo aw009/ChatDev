@@ -38,7 +38,7 @@
   replacing `[description_of_your_idea]` with your idea's description and `[project_name]` with your desired project
   name:
    ```
-   python3 run.py --task "[description_of_your_idea]" --name "[project_name]"
+python3 run.py --task "A python Flask and React application that gathers a process description from a user, sends that process description to gpt-3, and then instructs GPT to output a mermaid diagram which will be displayed to the user. Please use a postgres database and create all needed schemas. " --name "React_Flask_Diagram" --config "Human"
    ```
 
 - here is the full params of run.py
