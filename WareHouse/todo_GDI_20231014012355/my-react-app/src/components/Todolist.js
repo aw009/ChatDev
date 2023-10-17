@@ -16,7 +16,7 @@ function TodoList({ className, todos, handleCompleteTodo, handleDeleteTodo }) {
         <tr key={index} className={index % 2 === 0 ? 'even-row' : 'odd-row'}>
             <td>{todo.dateAdded}</td>
             <td>{todo.description}</td>
-            <td>{todo.dateCompleted || 'Not yet'}</td>
+            <td>{todo.dateCompleted || 'In process'}</td>
             <td>
                 {todo.dateCompleted ? (
                     <button onClick={() => handleDeleteTodo(todo.originalIndex)}>Delete</button>

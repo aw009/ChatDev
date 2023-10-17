@@ -91,14 +91,15 @@ table.active-tasks tbody tr:first-child {
   background-color: #fff; /* White right next to the header */
 }
 
-table.active-tasks tbody tr:nth-child(odd) {
+/* Styles for odd rows */
+table.active-tasks .odd-row {
   background-color: #ffebef; /* Light pink */
 }
 
-table.active-tasks tbody tr:nth-child(even) {
+/* Styles for even rows */
+table.active-tasks .even-row {
   background-color: #ffd3d9; /* Darker pink */
 }
-
 /* Completed tasks styles */
 table.completed-tasks thead {
   background-color: #64b5f6; /* Deeper blue */
@@ -109,10 +110,12 @@ table.completed-tasks tbody tr:first-child {
   background-color: #fff; /* White right next to the header */
 }
 
-table.completed-tasks tbody tr:nth-child(odd) {
+/* Styles for odd rows */
+table.completed-tasks .odd-row {
   background-color: #e7f7ff; /* Light blue */
 }
 
-table.completed-tasks tbody tr:nth-child(even) {
-  background-color: #d0e9ff; /* Slightly darker blue */
+/* Styles for even rows */
+table.completed-tasks .even-row {
+  background-color: #d0e9ff;  /* Slightly darker blue */
 }
